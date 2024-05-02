@@ -1,0 +1,19 @@
+{
+  "name": "amartinez/tarraco-luxe",
+  "description": "Proyecto TarracoLuxe",
+  "type": "project",
+  "authors": [
+    {
+      "name": "AlanMartinezDev",
+      "email": "alanmartiola@gmail.com"
+    }
+  ],
+  "require": {
+    "intervention/image": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "./classes"
+    }
+  }
+}
