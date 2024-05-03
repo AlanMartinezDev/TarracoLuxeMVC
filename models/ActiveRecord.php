@@ -45,7 +45,7 @@ class ActiveRecord
 
         if ($resultado) {
             // Redireccionar al usuario
-            header('Location: /TarracoLuxe/admin?resultado=1');
+            header('Location: /admin?resultado=1');
         }
     }
 
@@ -68,7 +68,7 @@ class ActiveRecord
 
         if ($resultado) {
             // Redireccionar al usuario
-            header('Location: /TarracoLuxe/admin?resultado=2');
+            header('Location: /admin?resultado=2');
         }
     }
 
@@ -81,7 +81,7 @@ class ActiveRecord
 
         if ($resultado) {
             $this->borrarImagen();
-            header('Location: /TarracoLuxe/admin?resultado=3');
+            header('Location: /admin?resultado=3');
         }
     }
 
