@@ -32,6 +32,13 @@ class Router
     // Muestra una vista
     public function render($view)
     {
-        include __DIR__ . "/views/$view.php";
+        // Almacena en memoria durante un tiempo
+        ob_start();
+
+        include_once __DIR__ . "/views/$view.php";
+
+        // Limpia la memoria
+        $contenido = ob_get_clean();
+        include_once __DIR__ . "/views/layout.php";
     }
 }
