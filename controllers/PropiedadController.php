@@ -11,13 +11,13 @@ class PropiedadController
         $router->render('propiedades/admin');
     }
 
-    public static function crear()
+    public static function crear(Router $router)
     {
-        echo "desde admin crear";
+        $router->render('propiedades/admin');
     }
 
-    public static function actualizar()
+    public static function actualizar(Router $router)
     {
-        echo "desde admin actualizar";
+        $router->render('propiedades/admin');
     }
 }
