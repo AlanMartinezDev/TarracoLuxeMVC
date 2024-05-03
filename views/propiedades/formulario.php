@@ -7,7 +7,7 @@
     <label for="imagen">Imagen:</label>
     <input type="file" id="imagen" name="propiedad[imagen]" value="<?php echo $propiedad->imagen; ?>" accept="image/jpeg, image/png">
     <?php if ($propiedad->imagen) { ?>
-        <img src="/TarracoLuxe/imagenes/<?php echo $propiedad->imagen ?>" class="imagen-small">
+        <img src="/imagenes/<?php echo $propiedad->imagen ?>" class="imagen-small">
     <?php } ?>
     <label for="descripcion">Descripción</label>
     <textarea id="descripcion" name="propiedad[descripcion]"><?php echo s($propiedad->descripcion); ?></textarea>

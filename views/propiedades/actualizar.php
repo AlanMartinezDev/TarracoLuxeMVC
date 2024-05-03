@@ -1,5 +1,5 @@
 <main class="contenedor seccion">
-    <h1>Crear propiedad</h1>
+    <h1>Actualizar propiedad</h1>
     <?php foreach ($errores as $error) : ?>
         <div class="alerta error">
             <?php echo $error; ?>
@@ -7,7 +7,7 @@
     <?php endforeach ?>
     <form class="formulario" method="POST" enctype="multipart/form-data">
         <?php include __DIR__ . "/formulario.php" ?>
-        <input type="submit" value="Crear propiedad" class="boton boton-verde">
+        <input type="submit" value="Actualizar propiedad" class="boton boton-verde">
     </form>
     <a href="/admin" class="boton boton-verde">Volver</a>
 </main>
