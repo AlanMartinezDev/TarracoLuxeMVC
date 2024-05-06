@@ -5,6 +5,7 @@ namespace Controllers;
 use Intervention\Image\Colors\Profile;
 use MVC\Router;
 use Model\Propiedad;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class PaginasController
 {
@@ -58,6 +59,39 @@ class PaginasController
     public static function contacto(Router $router)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Crear nueva instancia de PHPMailer
+            $mail = new PHPMailer();
+
+            // Configurar SMTP
+            $mail->isSMTP();
+            $mail->Host = 'sandbox.smtp.mailtrap.io';
+            $mail->SMTPAuth = true;
+            $mail->Username = '2c93c6c7d88b15';
+            $mail->Password = 'c4f0b2453c32b4';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 2525;
+
+            // Configurar el contenido del mail
+            $mail->setFrom('alan@tarracoluxe.com');
+            $mail->addAddress('alan@tarracoluxe.com', 'Alan');
+            $mail->Subject = 'Nuevo mensaje del formulario de contacto';
+
+            // Habilitar HTML
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+
+            // Definir el contenido
+            $contenido = '<html><p>Tienes un nuevo mensaje del formulario de contacto.</p></html>';
+
+            $mail->Body = $contenido;
+            $mail->AltBody = 'Esto es texto alternativo sin HTML';
+
+            // Enviar el mail
+            if ($mail->send()) {
+                echo "Mensaje enviado";
+            } else {
+                echo "Mensaje no enviado";
+            }
         }
 
         $router->render('paginas/contacto', []);
