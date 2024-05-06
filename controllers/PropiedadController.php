@@ -13,11 +13,14 @@ class PropiedadController
     public static function index(Router $router)
     {
         $propiedades = Propiedad::all();
+        $vendedores = Vendedor::all();
+
         $resultado = $_GET['resultado'] ?? null;
 
         $router->render('propiedades/admin', [
             'propiedades' => $propiedades,
-            'resultado' => $resultado
+            'resultado' => $resultado,
+            'vendedores' => $vendedores
         ]);
     }
 
@@ -116,7 +119,7 @@ class PropiedadController
         ]);
     }
 
-    public static function eliminar(Router $router)
+    public static function eliminar()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Validar ID
