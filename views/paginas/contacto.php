@@ -14,7 +14,7 @@
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" placeholder="Tu correo electrónico" name="contacto[email]" required />
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" placeholder="Tu teléfono" name="contacto[telefono]" />
+            <input type="tel" id="telefono" placeholder="Tu teléfono" name="contacto[telefono]" required />
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="contacto[mensaje]" required></textarea>
         </fieldset>
@@ -34,9 +34,9 @@
             <p>¿Cómo desea ser contactado?</p>
             <div class="forma-contacto">
                 <label for="contactar-telefono">Teléfono</label>
-                <input name="contacto" type="radio" value="telefono" id="contactar-telefono" name="contacto[contacto]" required />
+                <input type="radio" value="telefono" id="contactar-telefono" name="contacto[contacto]" required />
                 <label for="contactar-email">Correo electrónico</label>
-                <input name="contacto" type="radio" value="email" id="contactar-email" name="contacto[contacto]" required />
+                <input type="radio" value="email" id="contactar-email" name="contacto[contacto]" required />
             </div>
             <p>Si eligió teléfono, elija la fecha y hora para ser contactado</p>
             <label for="fecha">Fecha:</label>
