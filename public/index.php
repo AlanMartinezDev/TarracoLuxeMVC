@@ -3,6 +3,7 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\PaginasController;
+use Controllers\LoginController;
 use Controllers\PropiedadController;
 use Controllers\VendedorController;
 
@@ -17,6 +18,11 @@ $router->get('/blog', [PaginasController::class, 'blog']);
 $router->get('/entrada', [PaginasController::class, 'entrada']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
 $router->post('/contacto', [PaginasController::class, 'contacto']);
+
+// Login
+$router->get('/login', [LoginController::class, 'login']);
+$router->post('/login', [LoginController::class, 'login']);
+$router->get('/logout', [LoginController::class, 'logout']);
 
 // Zona privada
 $router->get('/admin', [PropiedadController::class, 'index']);
