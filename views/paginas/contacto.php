@@ -40,9 +40,9 @@
             </div>
             <p>Si eligió teléfono, elija la fecha y hora para ser contactado</p>
             <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="contacto[fecha]" />
+            <input type="date" id="fecha" name="contacto[fecha]" required />
             <label for="hora">Hora:</label>
-            <input type="time" id="hora" min="09:00" max="17:00" name="contacto[hora]" />
+            <input type="time" id="hora" min="09:00" max="17:00" name="contacto[hora]" required />
         </fieldset>
         <input type="submit" value="Enviar" class="boton-verde" />
     </form>
