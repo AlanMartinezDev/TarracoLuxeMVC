@@ -74,7 +74,7 @@
                 El personal se comportó de una excelente forma, muy buena atención y
                 la casa que me ofrecieron cumple con todas mis expectativas.
             </blockquote>
-            <p>- Alexandra Gomes</p>
+            <p>- Montse Mendiola</p>
         </div>
     </section>
 </div>
